@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+   
+}
+body{
+    background-color:  hsl(233, 47%, 7%);
+    text-align: center;
+}
+.container{
+    margin:100px auto;
+    display:flex;
+    flex-direction:row;
+    background-color:hsl(244, 38%, 16%) ;
+    width:1000px;
+    height: auto;
+    border-radius:20px;
+    
+    
+}
+.container .info{
+    border-radius:20px 0px 0px 20px;
+    width: 50%;
+    text-align:left;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+    line-height: 2rem;
+    
+}
+.container .info h1 {
+    width: 400px;
+    font-family: inter, sans-serif;
+    font-weight: 700;
+    color:hsl(0, 0%, 100%);
+    line-height: 3rem;
+    
+}
+.container .info h1 span{
+    color:hsl(277, 64%, 61%);
+}
+.container .info p {
+    width: 400px;
+    padding-bottom: 20px;
+    color:hsla(0, 0%, 100%, 0.75);
+    font-weight:400;
+    font-size: 15px;
+    font-family: "lexend Deca", sans-serif;
+
+}
+.container .info .numbers{
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.container .info .numbers p span {
+    color:hsl(0, 0%, 100%);
+    font-family: inter, sans-serif;
+    font-weight: 700;
+    font-size:19px;
+}
+/*image*/
+.container .image{
+    position: relative;
+    width:50%;
+    border-radius:0px 20px 20px 0px;
+}
+.container .image img{
+    width: 100%;
+    height: 100%;
+    border-radius:0px 20px 20px 0px;
+    filter:hsl(277, 64%, 61%);
+
+}
+.container .image::before {
+    border-radius: 0px 20px 20px 0px;
+    content:"";
+    position:absolute;
+    z-index:1;
+    width: 100%;
+    height: 100%;
+    background-color:hsla(277, 64%, 61%, 0.404);
+    
+}
+
+.attribution{
+    width: 100%;
+    color:blueviolet;
+    text-align: center ;
+}
+.attribution a{
+    color:white;
+}
+/* media queries */
+@media screen and (max-width:375px){
+    .container{
+        width: 90%;
+        height: auto;
+        display:flex;
+        flex-direction: column-reverse;
+        
+    }
+    .container .info{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        border-radius: 0px 0px 20px 20px;
+        margin-top:50px;
+        padding: 5px;
+
+    }
+    .container .info h1 {
+        width: 90%;
+        font-size: 30px;
+    }
+    .container .info p {
+        width: 90%;
+        margin-top:15px;
+        padding:10px;
+        text-align: center;
+    }
+    .container .info .numbers {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom:30px;
+    }
+    .container .image {
+        width:100%;
+        border-radius: 20px 20px 0px 0px;
+        
+    }
+    .container .image img {
+        border-radius: 20px 20px 0px 0px;
+    }
+    .container .image::before {
+        border-radius: 20px 20px 0px 0px;
+        content:"";
+        position:absolute;
+        z-index:1;
+        width: 100%;
+        height:99%;
+        background-color:hsla(277, 64%, 61%, 0.404);
+        
+    }
+    
+}
